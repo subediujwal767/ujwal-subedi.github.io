@@ -67,12 +67,21 @@ section.show{
   transform:translateY(0);
 }
 
-button{
-  padding:10px 15px;
-  background:#ff6b6b;
-  color:white;
-  border:none;
-  border-radius:8px;
+button {
+    background-color: #3498db;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* Hover Animation */
+butten:hover {
+    background-color: #2ecc71;
+    transform: scale(1.1);
+}
 }
 
 /* skills */
