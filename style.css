@@ -9,7 +9,7 @@
     width: 150px;
     height: 150px;
     border-radius: 100px; /* makes circle */
-    position: fixed;
+    position: center;
     right: 20px;
     top: 20px;
     object-fit: cover;
