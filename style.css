@@ -66,7 +66,6 @@ section.show{
   opacity:1;
   transform:translateY(0);
 }
-
 button {
     background-color: #3498db;
     color: white;
@@ -75,6 +74,12 @@ button {
     border-radius: 5px;
     cursor: pointer;
     transition: 0.3s;
+}
+
+/* Hover Animation */
+button:hover {
+    background-color: #2ecc71;
+    transform: scale(1.1);
 }
 
 /* Hover Animation */
