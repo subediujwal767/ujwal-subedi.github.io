@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Skill Profile</title>
+    <style>
+        /* Keyframe for the entrance of the card */
+        @keyframes slideUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Keyframe for the progress bars growth */
+        @keyframes growBar {
+            from { width: 0%; }
+        }
+
+        /* Pulse animation for the profile photo */
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0px rgba(0, 123, 255, 0.4); }
+            70% { box-shadow: 0 0 0 15px rgba(0, 123, 255, 0); }
+            100% { box-shadow: 0 0 0 0px rgba(0, 123, 255, 0); }
+        }
+
+        /* Hover effect for the skill rows */
+        .skill-row {
+            transition: transform 0.3s ease;
+            cursor: default;
+        }
+        .skill-row:hover {
+            transform: translateX(10px);
+        }
+    </style>
+</head>
+<body style="margin: 0; padding: 40px; font-family: 'Segoe UI', sans-serif; background: linear-gradient(135deg, #e0eafc 0%, #cfdef3 100%); min-height: 100vh; display: flex; align-items: center; justify-content: center;">
+
+    <section style="width: 100%; max-width: 500px; background: white; padding: 40px; border-radius: 30px; box-shadow: 0 20px 40px rgba(0,0,0,0.1); text-align: center; animation: slideUp 0.8s ease-out forwards;">
+        
+        <div style="position: relative; display: inline-block; margin-bottom: 20px;">
+            <img src="sss.jpg" alt="Profile" 
+                 style="width: 130px; height: 130px; border-radius: 50%; object-fit: cover; border: 5px solid white; box-shadow: 0 5px 15px rgba(0,0,0,0.2); animation: pulse 2s infinite;">
+        </div>
+        
+        <h2 style="margin: 0; font-size: 1.8rem; color: #333;">Creative Developer</h2>
+        <p style="color: #007bff; font-weight: 600; margin-top: 5px; margin-bottom: 35px; letter-spacing: 1px;">SKILL MATRIX</p>
+
+        <div style="text-align: left;">
+            
+            <div class="skill-row" style="margin-bottom: 25px;">
+                <div style="display: flex; justify-content: space-between; margin-bottom: 8px; font-size: 0.9rem; font-weight: bold;">
+                    <span>HTML5</span>
+                    <span>60%</span>
+                </div>
+                <div style="background: #eee; border-radius: 20px; height: 10px;">
+                    <div style="width: 60%; height: 100%; background: #e34c26; border-radius: 20px; animation: growBar 1.5s cubic-bezier(0.17, 0.67, 0.83, 0.67); position: relative;">
+                        <div style="position: absolute; top: 0; right: 0; bottom: 0; left: 0; background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent); animation: shine 2s infinite;"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="skill-row" style="margin-bottom: 25px;">
+                <div style="display: flex; justify-content: space-between; margin-bottom: 8px; font-size: 0.9rem; font-weight: bold;">
+                    <span>CSS3</span>
+                    <span>20%</span>
+                </div>
+                <div style="background: #eee; border-radius: 20px; height: 10px;">
+                    <div style="width: 20%; height: 100%; background: #264de4; border-radius: 20px; animation: growBar 1.5s ease-out;"></div>
+                </div>
+            </div>
+
+            <div class="skill-row" style="margin-bottom: 25px;">
+                <div style="display: flex; justify-content: space-between; margin-bottom: 8px; font-size: 0.9rem; font-weight: bold;">
+                    <span>C++</span>
+                    <span>20%</span>
+                </div>
+                <div style="background: #eee; border-radius: 20px; height: 10px;">
+                    <div style="width: 20%; height: 100%; background: #00599c; border-radius: 20px; animation: growBar 1.5s ease-out;"></div>
+                </div>
+            </div>
+
+            <div class="skill-row" style="margin-bottom: 25px;">
+                <div style="display: flex; justify-content: space-between; margin-bottom: 8px; font-size: 0.9rem; font-weight: bold;">
+                    <span>JAVASCRIPT</span>
+                    <span>10%</span>
+                </div>
+                <div style="background: #eee; border-radius: 20px; height: 10px;">
+                    <div style="width: 10%; height: 100%; background: #f7df1e; border-radius: 20px; animation: growBar 1.5s ease-out;"></div>
+                </div>
+            </div>
+
+            <div class="skill-row" style="margin-bottom: 25px;">
+                <div style="display: flex; justify-content: space-between; margin-bottom: 8px; font-size: 0.9rem; font-weight: bold;">
+                    <span>PYTHON</span>
+                    <span>5%</span>
+                </div>
+                <div style="background: #eee; border-radius: 20px; height: 10px;">
+                    <div style="width: 5%; height: 100%; background: #3776ab; border-radius: 20px; animation: growBar 1.5s ease-out;"></div>
+                </div>
+            </div>
+
+        </div>
+
+        <button onclick="alert('Thank you for visiting! Let\'s build something great. for contact me use this phone number:9825926919 or use this email:subediujwal767@gmail.com')" 
+                style="margin-top: 20px; background: #333; color: white; border: none; padding: 12px 30px; border-radius: 50px; font-weight: bold; cursor: pointer; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(0,0,0,0.2);">
+            CONTACT ME
+        </button>
+
+    </section>
+
+    <script>
+        // Optional: Trigger a console message when profile is loaded
+        window.onload = () => {
+            console.log("Skill Sheet Animated & Ready!");
+        };
+    </script>
+</body>
+</html>
